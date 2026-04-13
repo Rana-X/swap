@@ -88,6 +88,28 @@ npm run runway:simple -- \
   --preflightOnly
 ```
 
+## Basic UI
+
+Use the local run viewer to inspect prepared assets, warnings, failed requests, and generated output:
+
+```bash
+npm run ui
+```
+
+Then open:
+
+```text
+http://localhost:3123
+```
+
+The viewer reads the saved folders under `runs/` and shows:
+
+- generated output video when available
+- prepared target image
+- prepared source clip
+- preflight metadata and warnings
+- saved Runway API payload or failure details
+
 ## Notes on source quality
 
 Best first-test inputs:

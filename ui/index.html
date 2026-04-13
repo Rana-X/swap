@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Runway Run Viewer</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h1>Runs</h1>
+          <button id="refreshButton" type="button">Refresh</button>
+        </div>
+        <div id="runsList" class="runs-list"></div>
+      </aside>
+
+      <main class="content">
+        <div id="emptyState" class="empty-state">Loading runs…</div>
+        <div id="runDetail" class="run-detail hidden">
+          <header class="detail-header">
+            <div>
+              <h2 id="runTitle"></h2>
+              <p id="runMeta" class="muted"></p>
+            </div>
+            <span id="runStatus" class="status-pill"></span>
+          </header>
+
+          <section class="grid">
+            <article class="card">
+              <h3>Generated Output</h3>
+              <video id="outputVideo" class="media hidden" controls playsinline></video>
+              <p id="noOutput" class="muted">No generated output for this run.</p>
+            </article>
+
+            <article class="card">
+              <h3>Prepared Image</h3>
+              <img id="preparedImage" class="media hidden" alt="Prepared target" />
+              <p id="noImage" class="muted">No prepared image saved.</p>
+            </article>
+
+            <article class="card">
+              <h3>Prepared Video</h3>
+              <video id="preparedVideo" class="media hidden" controls playsinline muted></video>
+              <p id="noPreparedVideo" class="muted">No prepared source clip saved.</p>
+            </article>
+
+            <article class="card">
+              <h3>Summary</h3>
+              <dl id="summaryList" class="summary-list"></dl>
+            </article>
+          </section>
+
+          <section class="card">
+            <h3>Warnings</h3>
+            <ul id="warningsList" class="warnings-list"></ul>
+          </section>
+
+          <section class="card">
+            <h3>API / Failure Details</h3>
+            <pre id="apiDetails" class="code-block"></pre>
+          </section>
+
+          <section class="card">
+            <h3>Raw Preflight</h3>
+            <pre id="rawPreflight" class="code-block"></pre>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+  </html>
