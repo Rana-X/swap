@@ -1,0 +1,13 @@
+{
+  "name": "runway-act-two-first-test",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "runway:simple": "node scripts/runway-act-two-first-test.mjs",
+    "runway:test": "node scripts/runway-act-two-first-test.mjs",
+    "runway:preflight": "node scripts/runway-act-two-first-test.mjs --preflight-only"
+  },
+  "dependencies": {
+    "@runwayml/sdk": "^3.19.0"
+  }
+}

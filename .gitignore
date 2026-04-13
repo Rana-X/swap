@@ -1,0 +1,10 @@
+.env
+node_modules/
+runs/
+.DS_Store
+*_preview.jpg
+*_preview.jpeg
+*_preview.png
+*.HEIC.png
+ffmpeg-heic-test.jpg
+sips-heic-test.png
